@@ -16,13 +16,47 @@ const ScrollToAnchor = () => {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 0);
+      }, 50);
     } else {
       window.scrollTo(0, 0);
     }
   }, [hash, pathname]);
 
   useEffect(() => {
+    // Scroll progress tracker
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = totalScroll > 0 ? (window.scrollY / totalScroll) * 100 : 0;
+      const progressBar = document.getElementById('scrollProgressBar');
+      if (progressBar) {
+        progressBar.style.width = `${progress}%`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Interactive spotlight effect for cards
+    const handleMouseMove = (e) => {
+      const cards = document.querySelectorAll('.program-card, .bank-card, .value-list li, .gallery-item, .founder-portrait');
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        if (
+          e.clientX >= rect.left - 40 &&
+          e.clientX <= rect.right + 40 &&
+          e.clientY >= rect.top - 40 &&
+          e.clientY <= rect.bottom + 40
+        ) {
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        }
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+
+    // Smooth Intersection Observer for scroll animations
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -32,15 +66,23 @@ const ScrollToAnchor = () => {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
     );
 
-    setTimeout(() => {
+    const observeElements = () => {
       const elements = document.querySelectorAll('.reveal');
       elements.forEach((el) => observer.observe(el));
-    }, 100);
+    };
 
-    return () => observer.disconnect();
+    observeElements();
+    const timer = setTimeout(observeElements, 200);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+      observer.disconnect();
+      clearTimeout(timer);
+    };
   }, [pathname]);
 
   return null;
@@ -49,6 +91,7 @@ const ScrollToAnchor = () => {
 function App() {
   return (
     <BrowserRouter>
+      <div id="scrollProgressBar" className="scroll-progress-bar" style={{ width: '0%' }} aria-hidden="true" />
       <ScrollToAnchor />
       <Header />
       <Routes>

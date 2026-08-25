@@ -52,7 +52,7 @@ const Contribute = () => {
         </div>
 
         <div className={`tab-panel ${activeTab === 'give' ? 'active' : ''}`} role="tabpanel">
-          <div className="ledger-block">
+          <div className="ledger-block reveal">
             <h4>Where your support goes</h4>
             <div className="ledger-row">
               <span className="item-name">A child's complete uniform &amp; kit</span>
@@ -72,32 +72,32 @@ const Contribute = () => {
           </div>
 
           <div className="bank-grid">
-            <div className="bank-card">
+            <div className="bank-card reveal stagger-1">
               <div className="bc-head"><h5>Local Bank Transfer</h5><span className="bc-tag">NGN</span></div>
               <div className="bank-row"><span className="k">Account Name</span><span className="v">Christ the Greatest Foundation</span></div>
               <div className="bank-row"><span className="k">Bank Name</span><span className="v">[Insert bank name]</span></div>
               <div className="bank-row"><span className="k">Account No.</span><span className="v">[Insert account number]</span></div>
               <button className="copy-btn" onClick={() => handleCopy('local')}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                <span>{copyStatus.local ? 'Copied' : 'Copy account details'}</span>
+                <span>{copyStatus.local ? 'Copied to Clipboard!' : 'Copy account details'}</span>
               </button>
             </div>
 
-            <div className="bank-card">
+            <div className="bank-card reveal stagger-2">
               <div className="bc-head"><h5>International Wire</h5><span className="bc-tag">USD / SWIFT</span></div>
               <div className="bank-row"><span className="k">Beneficiary</span><span className="v">Christ the Greatest Foundation</span></div>
               <div className="bank-row"><span className="k">SWIFT / BIC</span><span className="v">[Insert SWIFT code]</span></div>
               <div className="bank-row"><span className="k">IBAN / Acct No.</span><span className="v">[Insert IBAN / account]</span></div>
               <button className="copy-btn" onClick={() => handleCopy('intl')}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                <span>{copyStatus.intl ? 'Copied' : 'Copy wire details'}</span>
+                <span>{copyStatus.intl ? 'Copied to Clipboard!' : 'Copy wire details'}</span>
               </button>
             </div>
           </div>
 
-          <p className="donate-note">
+          <p className="donate-note reveal stagger-3">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            Full, verified account details are issued on request — call or message <a href="https://wa.me/2348166158813" target="_blank" rel="noopener noreferrer" style={{color: 'var(--navy)', fontWeight: 'bold', textDecoration: 'none'}}>+234 816 615 8813</a> to confirm before sending a large gift.
+            Full, verified account details are issued on request — call or message <a href="https://wa.me/2348166158813" target="_blank" rel="noopener noreferrer" style={{color: 'var(--ink)', fontWeight: 'bold', textDecoration: 'underline'}}>+234 816 615 8813</a> to confirm before sending a large gift.
           </p>
         </div>
 

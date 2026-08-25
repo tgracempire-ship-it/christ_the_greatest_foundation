@@ -1,8 +1,12 @@
 import React from 'react';
+import AnimatedBackground from './AnimatedBackground';
 
 const Hero = () => {
   return (
     <section className="hero" id="top">
+      <AnimatedBackground />
+      <div className="hero-aurora-1" aria-hidden="true"></div>
+      <div className="hero-aurora-2" aria-hidden="true"></div>
       <div className="hero-bg-image"></div>
       <div className="container">
         <div className="hero-inner">

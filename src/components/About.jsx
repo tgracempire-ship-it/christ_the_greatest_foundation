@@ -12,17 +12,17 @@ const About = () => {
             <p>What began as a tuition-free classroom in Iju has grown into a network of programs reaching pupils in neighbouring schools, inmates in correctional facilities, and community members training for ministry and leadership.</p>
           </div>
         </div>
-        <div className="reveal">
+        <div>
           <ul className="value-list">
-            <li>
+            <li className="reveal stagger-1">
               <span className="idx">01</span>
               <div><strong>Access</strong><span className="desc">No child is turned away from schooling for lack of fees, uniforms, or books.</span></div>
             </li>
-            <li>
+            <li className="reveal stagger-2">
               <span className="idx">02</span>
               <div><strong>Dignity</strong><span className="desc">Every person we serve — pupil or inmate — is treated as worthy of care, not charity.</span></div>
             </li>
-            <li>
+            <li className="reveal stagger-3">
               <span className="idx">03</span>
               <div><strong>Transparency</strong><span className="desc">Our work is vetted and reported within the community we serve, in the open.</span></div>
             </li>

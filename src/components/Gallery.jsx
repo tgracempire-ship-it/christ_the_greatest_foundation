@@ -22,18 +22,20 @@ const Gallery = () => {
 
         <div className="gallery-grid" style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
           gap: '24px',
           marginTop: '40px'
         }}>
-          {images.map((img) => (
-            <div key={img.id} className="gallery-item" style={{
+          {images.map((img, index) => (
+            <div key={img.id} className={`gallery-item reveal stagger-${(index % 4) + 1}`} style={{
               position: 'relative',
               borderRadius: 'var(--radius)',
               overflow: 'hidden',
               aspectRatio: '4/3',
-              boxShadow: '0 4px 12px rgba(15,23,42,0.08)',
-              backgroundColor: 'var(--off-white)'
+              boxShadow: 'var(--shadow-sm)',
+              border: '1px solid var(--line)',
+              backgroundColor: 'var(--bg-surface)',
+              transition: 'transform 0.3s var(--ease), box-shadow 0.3s var(--ease)'
             }}>
               <img 
                 src={img.src} 
@@ -43,10 +45,16 @@ const Gallery = () => {
                   height: '100%',
                   objectFit: 'cover',
                   objectPosition: 'center top',
-                  transition: 'transform 0.3s var(--ease)'
+                  transition: 'transform 0.4s var(--ease)'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.04)';
+                  e.currentTarget.parentElement.style.boxShadow = 'var(--shadow-md)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.parentElement.style.boxShadow = 'var(--shadow-sm)';
+                }}
               />
             </div>
           ))}
