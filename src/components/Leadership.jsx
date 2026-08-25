@@ -8,7 +8,7 @@ const Leadership = () => {
           <div className="founder-portrait" style={{ backgroundImage: 'url(/pioneer.png)', backgroundSize: 'cover', backgroundPosition: 'center top' }}>
             <div className="founder-overlay"></div>
             <div className="founder-info">
-              <h3>Mr. Omoniyi Adebusola</h3>
+              <h3>Mr. Felix Omoniyi Adebusola</h3>
               <span className="role">Founder &amp; Visionary</span>
             </div>
             <svg className="seal-badge" viewBox="0 0 200 200" aria-hidden="true">
