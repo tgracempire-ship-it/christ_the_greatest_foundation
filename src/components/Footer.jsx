@@ -6,6 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="site-footer">
+      <div className="footer-geometric-bg" aria-hidden="true"></div>
       <div className="container">
         <div className="footer-top">
           <div>
@@ -14,10 +15,6 @@ const Footer = () => {
               <span>Christ the Greatest Foundation</span>
             </div>
             <p className="tagline">Grassroots humanitarian action from Iju, Akure North LGA, Ondo State — operating since 1999.</p>
-            <div className="validation-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
-              <span>Christ the Greatest Foundation is a non-profit humanitarian organization registered and vetted within the local community.</span>
-            </div>
           </div>
 
           <div className="footer-col">
@@ -60,11 +57,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <div className="stamp">
-            <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#059669" strokeWidth="1.5" strokeDasharray="2 3"/><path d="M13 20l4.5 4.5L27 15" fill="none" stroke="#B9E7D6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            <span>COMMUNITY VERIFIED — REC. CTGF/1999</span>
-          </div>
-          <span className="copyright">© <span id="year">{currentYear}</span> Christ the Greatest Foundation. Iju, Ondo State, Nigeria.</span>
+          <span className="copyright">© <span id="year">{currentYear}</span> Christ the Greatest Foundation. Iju, Ondo State, Nigeria. All rights reserved.</span>
         </div>
       </div>
     </footer>

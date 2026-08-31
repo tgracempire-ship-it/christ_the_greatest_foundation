@@ -11,20 +11,6 @@ const Leadership = () => {
               <h3>Mr. Felix Omoniyi Adebusola</h3>
               <span className="role">Founder &amp; Visionary</span>
             </div>
-            <svg className="seal-badge" viewBox="0 0 200 200" aria-hidden="true">
-              <defs>
-                <path id="sealPath" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"/>
-              </defs>
-              <circle cx="100" cy="100" r="92" fill="none" stroke="var(--emerald)" strokeWidth="2" strokeDasharray="3 5"/>
-              <circle cx="100" cy="100" r="78" fill="none" stroke="var(--gold)" strokeWidth="1.4"/>
-              <text fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="3" fill="#FFFFFF">
-                <textPath href="#sealPath" startOffset="1%">COMMUNITY VERIFIED • EST. 1999 • IJU •</textPath>
-              </text>
-              <g transform="translate(100,102)">
-                <circle r="34" fill="rgba(5,122,74,0.35)" stroke="var(--emerald)" strokeWidth="1.5"/>
-                <path d="M -14,0 L -4,10 L 16,-12" stroke="#10B981" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-              </g>
-            </svg>
           </div>
         </div>
 
@@ -37,7 +23,7 @@ const Leadership = () => {
           <div className="verify-card">
             <a href="https://wa.me/2348166158813" target="_blank" rel="noopener noreferrer" className="vc-item" style={{textDecoration: 'none'}}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <div><span className="vc-label">Verification Line</span><br/><span className="vc-value" style={{color: 'var(--ink)'}}>+234 816 615 8813</span></div>
+              <div><span className="vc-label">Direct Contact Line</span><br/><span className="vc-value" style={{color: 'var(--ink)'}}>+234 816 615 8813</span></div>
             </a>
             <div className="vc-item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="15" height="10" rx="2"/><path d="M17 10l5-2.5v9L17 14"/></svg>

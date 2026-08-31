@@ -37,7 +37,7 @@ const ScrollToAnchor = () => {
 
     // Interactive spotlight effect for cards
     const handleMouseMove = (e) => {
-      const cards = document.querySelectorAll('.program-card, .bank-card, .value-list li, .gallery-item, .founder-portrait');
+      const cards = document.querySelectorAll('.program-card, .bank-card, .value-list li, .gallery-item, .founder-portrait, .floating-hero-card, .value-pill-card, .strip-block, .cta-banner-card');
       cards.forEach((card) => {
         const rect = card.getBoundingClientRect();
         if (

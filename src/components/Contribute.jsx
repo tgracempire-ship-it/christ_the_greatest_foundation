@@ -97,7 +97,7 @@ const Contribute = () => {
 
           <p className="donate-note reveal stagger-3">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            Full, verified account details are issued on request — call or message <a href="https://wa.me/2348166158813" target="_blank" rel="noopener noreferrer" style={{color: 'var(--ink)', fontWeight: 'bold', textDecoration: 'underline'}}>+234 816 615 8813</a> to confirm before sending a large gift.
+            Direct account details are issued on request — call or message <a href="https://wa.me/2348166158813" target="_blank" rel="noopener noreferrer" style={{color: 'var(--ink)', fontWeight: 'bold', textDecoration: 'underline'}}>+234 816 615 8813</a> to confirm before sending your gift.
           </p>
         </div>
 
